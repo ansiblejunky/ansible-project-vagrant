@@ -1,0 +1,18 @@
+[windows]
+127.0.0.1
+
+[windows:vars]
+ansible_user='vagrant'
+ansible_password='vagrant'
+ansible_connection=winrm
+
+# https
+#ansible_port=55986
+#ansible_winrm_transport=ntlm 
+#ansible_winrm_server_cert_validation=ignore
+#ansible_winrm_scheme=https
+
+# http
+ansible_port=55985
+ansible_winrm_transport=ntlm
+ansible_winrm_scheme=http

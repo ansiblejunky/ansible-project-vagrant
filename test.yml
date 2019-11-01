@@ -1,0 +1,21 @@
+---
+- hosts: windows
+  connection: local
+  gather_facts: true
+
+  tasks:
+  - win_ping:
+
+  - debug:
+      msg: "Connected to windows server"
+
+
+- hosts: linux
+  connection: local
+  gather_facts: false
+
+  tasks:
+  - ping:
+    
+  - debug:
+      msg: "Connected to linux server"
